@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ninja Keys</title>
+
+		<!-- Zing-Grid lib -->
+		<script
+			type="module"
+			src="https://cdn.zinggrid.com/zinggrid.min.js"
+		></script>
+
+		<!-- Ninja Keys -->
+		<script type="module" src="https://unpkg.com/ninja-keys?module"></script>
+
+		<!-- Script -->
+		<script type="module" src="./script.js"></script>
+
+		<style>
+			h1 {
+				font-family: sans-serif;
+			}
+
+			h1 kbd {
+				background-color: #d8d8d8;
+				border-radius: 5px;
+				display: inline-block;
+				padding: 3px 7px;
+			}
+
+			ninja-keys {
+				--ninja-font-size: 1.25rem;
+				position: relative;
+				z-index: 2;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- <h1>Try using <kbd>CMD</kbd>+<kbd>K</kbd>!</h1> -->
+		<ninja-keys></ninja-keys>
+		<!--Grid Component Placement-->
+		<zing-grid caption="Hello Futurama">
+			<zg-colgroup>
+				<zg-column index="firstName"></zg-column>
+				<zg-column index="lastName"></zg-column>
+			</zg-colgroup>
+			<zg-data
+				data='[
+						{ "firstName": "Philip", "lastName": "Fry" },
+						{ "firstName": "Turanga", "lastName": "Leela" },
+						{ "firstName": "Bender", "lastName": "Rodriguez" },
+						{ "firstName": "Amy", "lastName": "Wong" }
+					]'
+			></zg-data>
+		</zing-grid>
+	</body>
+</html>
